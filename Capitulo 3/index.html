@@ -27,37 +27,67 @@
 
     <main>
         <form>
-            <label for="nomecompleto">Nome Completo</label>
-            <input type="text" id="nomecompleto">
+            <label for="nomecompleto">Nome Completo *</label>
+            <input type="text" id="nomecompleto" class="input-padrao" required>
 
-            <label for="email">Email</label>
-            <input type="text" id="email">
+            <label for="email">Email *</label>
+            <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
 
-            <label for="telefone">Telefone</label>
-            <input type="number" id="telefone">
+            <label for="telefone">Telefone *</label>
+            <input type="tel" id="telefone" class="input-padrao" required placeholder="(DDD) XXXXX - XXXX">
 
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" cols="70" rows="10"></textarea>
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" cols="70" rows="10" required></textarea>
 
-            <div>
-                <p>Como prefere nosso contato?</p>
-                <label for="radio-email">Email</label>
-                <input type="radio" name="contato" value="email" id="radio-email">
+            <fieldset>
+                <legend>Como prefere nosso contato?</legend>
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone"
+                        id="radio-telefone">Telefone</label>
+                <label for="radio-wpp"><input type="radio" name="contato" value="wpp" id="radio-wpp"
+                        checked>WhatsApp</label>
+            </fieldset>
 
-                <label for="radio-telefone">Telefone</label>
-                <input type="radio" name="contato" value="telefone" id="radio-telefone">
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</le>
+                    <select name="" id="">
+                        <option value="">Manhã</option>
+                        <option value="">Tarde</option>
+                        <option value="">Noite</option>
+                    </select>
+            </fieldset>
 
-                <label for="radio-wpp">WhatsApp</label>
-                <input type="radio" name="contato" value="wpp" id="radio-wpp">
-            </div>
-
-            <label><input type="checkbox"> Gostaria de receber nossas novidades por email?</label>
-            <input type="submit" value="Concluir">
+            <label class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades por
+                email?</label>
+            <input type="submit" value="Concluir" class="enviar">
         </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <footer>
-        <img src="imagens/logo-branco.png" alt="Logo branco do rodape Barbearia Alura">
+        <img src="imagens/logo-branco.png" alt="Logo branco do rodapé Barbearia Alura">
         <p class="Copyright">&copy; Copyright Barbearia Alura - 2022</p>
     </footer>
 </body>
